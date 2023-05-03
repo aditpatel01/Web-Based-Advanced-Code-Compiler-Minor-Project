@@ -5,6 +5,7 @@ from .routes.convertPseudo import router as ConvertCodeIntoPseudoRouter
 from .routes.translatePseudo import router as TranslateRouter
 from .routes.warnings import router as WarningsRouter
 from .routes.shareCode import router as ShareCodeRouter
+from .routes.flowchart import router as FlowchartRouter
 
 app = FastAPI()
 
@@ -16,6 +17,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(FlowchartRouter, tags=["Create FlowChart"], prefix="/api/v1/flow")
 app.include_router(CodeCompileRouter, tags=["Code Compile"], prefix="/api/v1/compile")
 app.include_router(ConvertCodeIntoPseudoRouter, tags=["Convert Code into Pseudo Code"], prefix="/api/v1/convert")
 app.include_router(TranslateRouter, tags=["Translate Pseudo Code"], prefix="/api/v1/translate")

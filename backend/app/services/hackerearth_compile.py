@@ -71,9 +71,10 @@ def suar(url):
     finalRes=resu.decode('utf-8')
     res=dict()
     res['fir']=response.json()['result']['run_status']
-    res['sec']=finalRes
-
-    print(response.text)
+    res['sec']=resu
+    print('------')
+    print(finalRes)
+    print('------')
     return res
     # return response.json()['result']['run_status']
 

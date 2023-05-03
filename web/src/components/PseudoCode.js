@@ -19,7 +19,7 @@ export default function CodeEditor({ code }) {
       setLoadingFlow(true);
 
       const res = await axios.post(
-        "https://pseudo-x.herokuapp.com/api/v1/flow/",
+        "http://localhost:8000/api/v1/flow/",
         {
           source: code,
           test: "",
@@ -101,7 +101,7 @@ export default function CodeEditor({ code }) {
       setLoading(true);
 
       const res = await axios.post(
-        "https://pseudo-x.herokuapp.com/api/v1/convert/",
+        "http://localhost:8000/api/v1/convert/",
         {
           source: code,
           test: "",

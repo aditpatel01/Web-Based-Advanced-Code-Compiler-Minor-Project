@@ -13,7 +13,7 @@ export default function Warnings({ code }) {
       setLoading(true);
 
       const res = await axios.post(
-        "https://pseudo-x.herokuapp.com/api/v1/warnings/",
+        "http://localhost:8000/api/v1/warnings/",
         {
           source: code,
           test: "",

@@ -13,7 +13,7 @@ export default function Navbar({ code }) {
       setLoading(true);
 
       const res = await axios.post(
-        "https://pseudo-x.herokuapp.com/api/v1/share/",
+        "http://localhost:8000/api/v1/share/",
         {
           codes: code,
           id: 0,
@@ -21,7 +21,7 @@ export default function Navbar({ code }) {
       );
 
       setLoading(false);
-      setUrl("https://decoding.surge.sh/" + res.data.id);
+      setUrl("http://localhost:3000/" + res.data.id);
 
       console.log(res.data);
     } catch (err) {

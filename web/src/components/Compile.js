@@ -17,7 +17,7 @@ export default function Compile({ code }) {
       // https://pseudo-x.herokuapp.com/api/v1/compile/
       var data = qs.stringify({
         'source': code,
-        'input': inp 
+        'input': '0' 
       });
       var config = {
         method: 'post',
